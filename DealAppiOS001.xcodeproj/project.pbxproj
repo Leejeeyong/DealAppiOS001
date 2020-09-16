@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D96250E8F42DD246C628BF8 /* Pods_DealAppiOS001.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906AC47A56817B44DA762601 /* Pods_DealAppiOS001.framework */; };
 		ECEAF0D4250E3B4C00B1F419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0D3250E3B4C00B1F419 /* AppDelegate.swift */; };
 		ECEAF0D6250E3B4C00B1F419 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0D5250E3B4C00B1F419 /* SceneDelegate.swift */; };
 		ECEAF0D8250E3B4C00B1F419 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0D7250E3B4C00B1F419 /* ViewController.swift */; };
@@ -20,9 +21,14 @@
 		ECEAF0F02511B0BE00B1F419 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0EF2511B0BE00B1F419 /* HomeDetailViewController.swift */; };
 		ECEAF0F22511B0DB00B1F419 /* MyDealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0F12511B0DB00B1F419 /* MyDealDetailViewController.swift */; };
 		ECEAF0F42511B32400B1F419 /* MydealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0F32511B32400B1F419 /* MydealCell.swift */; };
+		ECEAF0F62511E19300B1F419 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECEAF0F52511E19300B1F419 /* GoogleService-Info.plist */; };
+		ECEAF0F82511E5F300B1F419 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEAF0F72511E5F300B1F419 /* FirebaseCore.framework */; };
+		ECEAF0FA2511E5F300B1F419 /* FirebaseFirestore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECEAF0F92511E5F300B1F419 /* FirebaseFirestore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		906AC47A56817B44DA762601 /* Pods_DealAppiOS001.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DealAppiOS001.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D2C56564C58FB88818AB1B /* Pods-DealAppiOS001.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealAppiOS001.debug.xcconfig"; path = "Target Support Files/Pods-DealAppiOS001/Pods-DealAppiOS001.debug.xcconfig"; sourceTree = "<group>"; };
 		ECEAF0D0250E3B4B00B1F419 /* DealAppiOS001.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DealAppiOS001.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEAF0D3250E3B4C00B1F419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECEAF0D5250E3B4C00B1F419 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +44,10 @@
 		ECEAF0EF2511B0BE00B1F419 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		ECEAF0F12511B0DB00B1F419 /* MyDealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDealDetailViewController.swift; sourceTree = "<group>"; };
 		ECEAF0F32511B32400B1F419 /* MydealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MydealCell.swift; sourceTree = "<group>"; };
+		ECEAF0F52511E19300B1F419 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ECEAF0F72511E5F300B1F419 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECEAF0F92511E5F300B1F419 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F432056FBB3857F969D55D7C /* Pods-DealAppiOS001.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealAppiOS001.release.xcconfig"; path = "Target Support Files/Pods-DealAppiOS001/Pods-DealAppiOS001.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +55,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEAF0F82511E5F300B1F419 /* FirebaseCore.framework in Frameworks */,
+				ECEAF0FA2511E5F300B1F419 /* FirebaseFirestore.framework in Frameworks */,
+				9D96250E8F42DD246C628BF8 /* Pods_DealAppiOS001.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9BCADD2BF5D6524C3C636826 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95D2C56564C58FB88818AB1B /* Pods-DealAppiOS001.debug.xcconfig */,
+				F432056FBB3857F969D55D7C /* Pods-DealAppiOS001.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ECEAF0C7250E3B4B00B1F419 = {
 			isa = PBXGroup;
 			children = (
 				ECEAF0D2250E3B4B00B1F419 /* DealAppiOS001 */,
 				ECEAF0D1250E3B4B00B1F419 /* Products */,
+				9BCADD2BF5D6524C3C636826 /* Pods */,
+				F83C0F45069BB2C058B2692A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +101,7 @@
 				ECEAF0DC250E3B4D00B1F419 /* Assets.xcassets */,
 				ECEAF0DE250E3B4D00B1F419 /* LaunchScreen.storyboard */,
 				ECEAF0E1250E3B4D00B1F419 /* Info.plist */,
+				ECEAF0F52511E19300B1F419 /* GoogleService-Info.plist */,
 				ECEAF0E725108C6200B1F419 /* HomeViewController.swift */,
 				ECEAF0EF2511B0BE00B1F419 /* HomeDetailViewController.swift */,
 				ECEAF0E92511AAB900B1F419 /* HomeCell.swift */,
@@ -88,6 +113,16 @@
 			path = DealAppiOS001;
 			sourceTree = "<group>";
 		};
+		F83C0F45069BB2C058B2692A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECEAF0F72511E5F300B1F419 /* FirebaseCore.framework */,
+				ECEAF0F92511E5F300B1F419 /* FirebaseFirestore.framework */,
+				906AC47A56817B44DA762601 /* Pods_DealAppiOS001.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -95,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECEAF0E4250E3B4D00B1F419 /* Build configuration list for PBXNativeTarget "DealAppiOS001" */;
 			buildPhases = (
+				6354879E31A8DA5B706C9B67 /* [CP] Check Pods Manifest.lock */,
 				ECEAF0CC250E3B4B00B1F419 /* Sources */,
 				ECEAF0CD250E3B4B00B1F419 /* Frameworks */,
 				ECEAF0CE250E3B4B00B1F419 /* Resources */,
+				A7DE8AF91C7BE7B6EC989985 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,12 +184,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECEAF0E0250E3B4D00B1F419 /* LaunchScreen.storyboard in Resources */,
+				ECEAF0F62511E19300B1F419 /* GoogleService-Info.plist in Resources */,
 				ECEAF0DD250E3B4D00B1F419 /* Assets.xcassets in Resources */,
 				ECEAF0DB250E3B4C00B1F419 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6354879E31A8DA5B706C9B67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DealAppiOS001-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7DE8AF91C7BE7B6EC989985 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DealAppiOS001/Pods-DealAppiOS001-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DealAppiOS001/Pods-DealAppiOS001-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DealAppiOS001/Pods-DealAppiOS001-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECEAF0CC250E3B4B00B1F419 /* Sources */ = {
@@ -310,6 +390,7 @@
 		};
 		ECEAF0E5250E3B4D00B1F419 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95D2C56564C58FB88818AB1B /* Pods-DealAppiOS001.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,7 +400,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = koiware.DealAppiOS001;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koiware.DealAppiOS001;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,6 +409,7 @@
 		};
 		ECEAF0E6250E3B4D00B1F419 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F432056FBB3857F969D55D7C /* Pods-DealAppiOS001.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -337,7 +419,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = koiware.DealAppiOS001;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koiware.DealAppiOS001;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

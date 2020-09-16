@@ -7,30 +7,64 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class ViewController: UIViewController{
+    @IBOutlet weak var IDTextField: UITextField!
+    @IBOutlet weak var InfoTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let myCell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath)
+        
+        let db = Firestore.firestore()
+        
+        db.collection("UserData").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
+        
+        
+        
         
     }
-    
-    class tableViewCell: UITableViewCell{
-        @IBOutlet weak var imageviewCell: UIImageView!
-        @IBOutlet weak var titleLabelCell: UILabel!
+
+    @IBAction func LoginButtonAction(_ sender: Any) {
+        
+        
+        let db = Firestore.firestore()
+        
+        db.collection("UserData").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    if(self.IDTextField.text == (document.get("ID") as! String)){
+                        print("아이디 일치")
+                        if(self.InfoTextField.text == (document.get("PASSWORD") as! String)){
+                            print("비밀번호 일치")
+                            print("\(document.data())")
+                            self.performSegue(withIdentifier: "showLogintComp", sender: nil)
+                        }
+                    }
+                }
+                
+            }
+            
+            
+            
+        }
         
     }
+    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
+
 }
 

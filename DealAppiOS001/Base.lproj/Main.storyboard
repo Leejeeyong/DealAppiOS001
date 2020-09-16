@@ -34,7 +34,7 @@
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="VUr-QJ-3vA" kind="show" id="vuW-GV-ibN"/>
+                                    <action selector="LoginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KR9-Ca-WYP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,6 +53,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="bdj-sm-Dj6"/>
+                    <connections>
+                        <outlet property="IDTextField" destination="Py2-ZK-J6i" id="ee9-U7-705"/>
+                        <outlet property="InfoTextField" destination="02D-jT-tlc" id="aW8-ir-GaC"/>
+                        <segue destination="VUr-QJ-3vA" kind="show" identifier="showLogintComp" id="DP3-EF-aeA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
