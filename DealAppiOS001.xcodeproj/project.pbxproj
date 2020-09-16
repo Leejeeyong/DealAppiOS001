@@ -13,6 +13,13 @@
 		ECEAF0DB250E3B4C00B1F419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEAF0D9250E3B4C00B1F419 /* Main.storyboard */; };
 		ECEAF0DD250E3B4D00B1F419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECEAF0DC250E3B4D00B1F419 /* Assets.xcassets */; };
 		ECEAF0E0250E3B4D00B1F419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEAF0DE250E3B4D00B1F419 /* LaunchScreen.storyboard */; };
+		ECEAF0E825108C6200B1F419 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0E725108C6200B1F419 /* HomeViewController.swift */; };
+		ECEAF0EA2511AAB900B1F419 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0E92511AAB900B1F419 /* HomeCell.swift */; };
+		ECEAF0EC2511B02600B1F419 /* MyDealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0EB2511B02600B1F419 /* MyDealViewController.swift */; };
+		ECEAF0EE2511B07D00B1F419 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0ED2511B07D00B1F419 /* WriteViewController.swift */; };
+		ECEAF0F02511B0BE00B1F419 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0EF2511B0BE00B1F419 /* HomeDetailViewController.swift */; };
+		ECEAF0F22511B0DB00B1F419 /* MyDealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0F12511B0DB00B1F419 /* MyDealDetailViewController.swift */; };
+		ECEAF0F42511B32400B1F419 /* MydealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAF0F32511B32400B1F419 /* MydealCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		ECEAF0DC250E3B4D00B1F419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECEAF0DF250E3B4D00B1F419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECEAF0E1250E3B4D00B1F419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECEAF0E725108C6200B1F419 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ECEAF0E92511AAB900B1F419 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		ECEAF0EB2511B02600B1F419 /* MyDealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDealViewController.swift; sourceTree = "<group>"; };
+		ECEAF0ED2511B07D00B1F419 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		ECEAF0EF2511B0BE00B1F419 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
+		ECEAF0F12511B0DB00B1F419 /* MyDealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDealDetailViewController.swift; sourceTree = "<group>"; };
+		ECEAF0F32511B32400B1F419 /* MydealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MydealCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +77,13 @@
 				ECEAF0DC250E3B4D00B1F419 /* Assets.xcassets */,
 				ECEAF0DE250E3B4D00B1F419 /* LaunchScreen.storyboard */,
 				ECEAF0E1250E3B4D00B1F419 /* Info.plist */,
+				ECEAF0E725108C6200B1F419 /* HomeViewController.swift */,
+				ECEAF0EF2511B0BE00B1F419 /* HomeDetailViewController.swift */,
+				ECEAF0E92511AAB900B1F419 /* HomeCell.swift */,
+				ECEAF0ED2511B07D00B1F419 /* WriteViewController.swift */,
+				ECEAF0EB2511B02600B1F419 /* MyDealViewController.swift */,
+				ECEAF0F12511B0DB00B1F419 /* MyDealDetailViewController.swift */,
+				ECEAF0F32511B32400B1F419 /* MydealCell.swift */,
 			);
 			path = DealAppiOS001;
 			sourceTree = "<group>";
@@ -138,9 +159,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEAF0EC2511B02600B1F419 /* MyDealViewController.swift in Sources */,
 				ECEAF0D8250E3B4C00B1F419 /* ViewController.swift in Sources */,
 				ECEAF0D4250E3B4C00B1F419 /* AppDelegate.swift in Sources */,
+				ECEAF0F22511B0DB00B1F419 /* MyDealDetailViewController.swift in Sources */,
 				ECEAF0D6250E3B4C00B1F419 /* SceneDelegate.swift in Sources */,
+				ECEAF0F02511B0BE00B1F419 /* HomeDetailViewController.swift in Sources */,
+				ECEAF0E825108C6200B1F419 /* HomeViewController.swift in Sources */,
+				ECEAF0EA2511AAB900B1F419 /* HomeCell.swift in Sources */,
+				ECEAF0EE2511B07D00B1F419 /* WriteViewController.swift in Sources */,
+				ECEAF0F42511B32400B1F419 /* MydealCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
