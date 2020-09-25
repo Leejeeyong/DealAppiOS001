@@ -23,10 +23,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        tableView.dataSource = self
+        tableView.delegate = self
         let db = Firestore.firestore()
         
-        db.collection("TableData").order(by: "Date", descending: false).getDocuments() { (querySnapshot, err) in
+        db.collection("TableData").order(by: "Date", descending: true).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -44,8 +45,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         
-        tableView.dataSource = self
-        tableView.delegate = self
         initRefresh()
     }
 
@@ -56,7 +55,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         refresh.addTarget(self, action: #selector(UpdateUI(refresh:)), for: .valueChanged)
         refresh.attributedTitle = NSAttributedString(string: "새로고침")
         
-        tableView.addSubview(refresh)
+        
+        self.tableView.addSubview(refresh)
         
     }
     
@@ -65,11 +65,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let db = Firestore.firestore()
         
-        db.collection("TableData").order(by: "Date", descending: false).getDocuments() { (querySnapshot, err) in
+        db.collection("TableData").order(by: "Date", descending: true).getDocuments() { [self] (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 var i = 0
+                
                 for document in querySnapshot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     self.titleList.insert(document.get("Title") as! String, at: i)
@@ -79,11 +80,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.statelist.insert(document.get("State") as! Int, at: i)
                     i+=1
                 }
+                tableView.reloadData()
             }
         }
-        
+
+        self.titleList.removeAll()
+        self.namelist.removeAll()
+        self.datelist.removeAll()
+        self.pricelist.removeAll()
+        self.statelist.removeAll()
         refresh.endRefreshing()
-        tableView.reloadData()
     }
 
     /*
@@ -118,7 +124,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titleList.count-1
+        return titleList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

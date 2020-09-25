@@ -24,7 +24,7 @@ class HomeDetailViewController: UIViewController {
         
         let db = Firestore.firestore()
         
-        db.collection("TableData").order(by: "Date", descending: false).getDocuments() { (querySnapshot, err) in
+        db.collection("TableData").order(by: "Date", descending: true).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {

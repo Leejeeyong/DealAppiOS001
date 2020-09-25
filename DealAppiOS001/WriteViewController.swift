@@ -13,9 +13,12 @@ class WriteViewController: UIViewController {
     @IBOutlet weak var mainTextView: UITextView!
     @IBOutlet weak var priceTextView: UITextField!
     
+    let dateformat = DateFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        dateformat.dateFormat = "yyyyMMddHHmmss"
         
         mainTextView.layer.cornerRadius = 10
         priceTextView.layer.cornerRadius = 10
@@ -26,6 +29,7 @@ class WriteViewController: UIViewController {
     @IBAction func writeAction(_ sender: Any) {
         let db = Firestore.firestore()
         var ref: DocumentReference? = nil
+        let now = NSDate()
         
         if(mainTextView.text.count >= 10 && Int(priceTextView.text!)! >= 2000){
             // Add a second document with a generated ID.
@@ -33,7 +37,7 @@ class WriteViewController: UIViewController {
                 "Writer": "Alan",
                 "Title": mainTextView.text ?? "",
                 "Price": Int(priceTextView.text ?? "") ?? 0,
-                "Date": "20200808",
+                "Date": dateformat.string(from: now as Date),
                 "State": 1,
                 "ImageInf": "aaaa"
             ]) { err in

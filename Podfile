@@ -13,6 +13,8 @@ target 'DealAppiOS001' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'Firebase/InAppMessaging'
+  pod 'Firebase/Analytics'
 
   # Optionally, include the Swift extensions if you're using Swift.
   pod 'FirebaseFirestoreSwift'
